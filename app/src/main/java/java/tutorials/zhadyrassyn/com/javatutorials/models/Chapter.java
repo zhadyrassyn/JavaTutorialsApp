@@ -11,5 +11,11 @@ public class Chapter {
     public int id;
     public String name;
     public List<SubChapter> subChapterList = new ArrayList<>();
-    public boolean active = false;
+
+    public Chapter() {}
+
+    public Chapter(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

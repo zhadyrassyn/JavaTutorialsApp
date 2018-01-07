@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
         chapter1.subChapterList.add(subChapter11);
         chapter1.subChapterList.add(subChapter12);
+        chapter1.subChapterList.add(new SubChapter(subChapterCounter.incrementAndGet(), "Operators"));
+        chapter1.subChapterList.add(new SubChapter(subChapterCounter.incrementAndGet(), "Strings"));
+        chapter1.subChapterList.add(new SubChapter(subChapterCounter.incrementAndGet(), "Input and Output"));
+        chapter1.subChapterList.add(new SubChapter(subChapterCounter.incrementAndGet(), "Arrays"));
 
         chapterList.add(chapter1);
 
@@ -90,5 +94,15 @@ public class MainActivity extends AppCompatActivity {
         chapter2.subChapterList.add(subChapter23);
 
         chapterList.add(chapter2);
+
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 3: Inheritance"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 4: Interfaces n InnerClasses"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 5: Exceptions"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 6: Generic Programming"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 7: Data structures - Collections"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 8: Multithreading"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 9: File streams I/O"));
+        chapterList.add(new Chapter(chapterCounter.incrementAndGet(), "Chapter 10: JDBC"));
+
     }
 }

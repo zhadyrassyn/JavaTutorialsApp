@@ -7,4 +7,11 @@ package java.tutorials.zhadyrassyn.com.javatutorials.models;
 public class SubChapter {
     public int id;
     public String name;
+
+    public SubChapter() {}
+
+    public SubChapter(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
