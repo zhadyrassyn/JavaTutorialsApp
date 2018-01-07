@@ -2,4 +2,42 @@
     <string name="app_name">JavaTutorials</string>
 
     <string name="app_title">Java Tutorials</string>
+
+    <string name="data_types_part1">
+        The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This invlolves stating the variable\'s
+        type and name, as you've already seen:
+    </string>
+
+    <string name="data_types_part2">
+        Doing so tells your program that a field named "gear" exists, holds numberical data, and has an
+        initial value of "1". A variable\'s data type determines the values it may contain,
+        plus the operations that may be performed on it.
+        In addition to int, the Java programming language supports seven other primitive data types.
+        A primitive type is predefined by the language and is named by a reserved keyword.
+        Primitive values do not share state with other primitive values.
+        The eight primitive data types supported by the Java programming language are:
+    </string>
+
+    <string name="data_types_part3">
+        &#8226; The byte data type is an 8-bit signed two\'s complement integer. It has a minimum value
+        of -128 and a maximum value of 127(inclusive) The byte data type can be
+        useful for saving memory in large arrays,
+        where the memory savings actually matters. They can also be used in place of int where
+        their limits help to clarify your code; the face that a variable\'s range is limited can serve asa a form of documentation.
+    </string>
+
+    <string name="data_types_part4">
+        &#8226; The short data type is a 16-bit signed two\'s complement integer. It has a
+        minimum value of -32,768 and a aximum value of 32,767(inclusive). As with byte, the same
+        guidelines apply: you can use a short to save memory in large arrays, in situations where
+        the memory savings actually matters
+    </string>
+
+    <string name="data_types_part5">
+        &#8226; By default, the int data type is a 32-bit signed two\'s complement integer, which has a minimum value of -2^31
+        and a maximum value of 2^32-1. In java SE 8 and later, you can use the int data type to represent an
+        unsigned 32-bit integer, which has a minium value of 0 and a maximum value of 2^32-1. Use the Integer class tho use int data type as an unsinged integer. See the section The Number Classes for information. Static
+        methods like compareUnsinged, divideUnsigned etc have been added to the Integer class to support the arithmetic operations for unsigned integers.
+    </string>
+
 </resources>

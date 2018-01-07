@@ -1,6 +1,7 @@
 package java.tutorials.zhadyrassyn.com.javatutorials.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.tutorials.zhadyrassyn.com.javatutorials.R;
+import java.tutorials.zhadyrassyn.com.javatutorials.activities.DataTypesActivity;
+import java.tutorials.zhadyrassyn.com.javatutorials.activities.VariablesActivity;
 import java.tutorials.zhadyrassyn.com.javatutorials.interfaces.RecyclerViewClickListener;
 import java.tutorials.zhadyrassyn.com.javatutorials.models.Chapter;
 import java.tutorials.zhadyrassyn.com.javatutorials.models.SubChapter;
@@ -45,18 +48,28 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHo
         for (int i = 0; i < chapter.subChapterList.size(); i++) {
             final TextView tv = new TextView(context);
 
-            SubChapter subChapter = chapter.subChapterList.get(i);
+            final SubChapter subChapter = chapter.subChapterList.get(i);
 
             tv.setText(subChapter.name);
-            tv.setTextSize(16);
+            tv.setTextSize(18);
+            tv.setTextColor(context.getResources().getColor(R.color.colorPrimary));
+
             LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            llp.setMargins(30, 0, 0, 10); // llp.setMargins(left, top, right, bottom);
+            llp.setMargins(30, 10, 10, 10); // llp.setMargins(left, top, right, bottom);
             tv.setLayoutParams(llp);
 
             tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, tv.getText().toString(), Toast.LENGTH_LONG).show();
+                    Intent intent = null;
+                    if(subChapter.id == 1) {
+                        intent = new Intent(context, DataTypesActivity.class);
+                    } else if(subChapter.id == 2) {
+                        intent = new Intent(context, VariablesActivity.class);
+                    }
+                    if(intent != null) {
+                        context.startActivity(intent);
+                    }
                 }
             });
 

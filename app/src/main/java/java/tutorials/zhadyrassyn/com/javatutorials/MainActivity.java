@@ -33,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         RecyclerViewClickListener listener = new RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position, LinearLayout subChapterLayout) {
-                Toast.makeText(MainActivity.this, "Position " + position, Toast.LENGTH_SHORT).show();
                 if(subChapterLayout.getVisibility() == View.GONE) {
                     subChapterLayout.setVisibility(View.VISIBLE);
                 } else {
